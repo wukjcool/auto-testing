@@ -9,6 +9,7 @@
   var el = document.getElementById("countdown");
   var isIE = navigator.appName.indexOf("Explorer") > -1;
   var routerBase = window.routerBase || "/";
+  routerBase = routerBase + '/auto-testing'
   var isInternalDirect = true;
   var redirectUrl = "/pages/a61298/";
   var countdown = el 
@@ -18,9 +19,9 @@
   function redirect() { 
     if (countdown <= 0) { 
       if (isInternalDirect) {
-         redirectUrl = routerBase + '/auto-testing' + redirectUrl.replace(/^\//, '')
+         redirectUrl = routerBase +  redirectUrl.replace(/^\//, '')
       }
-      location.href = '/auto-testing' + redirectUrl
+      location.href = redirectUrl
 
     } else {
       if (isIE) { 
