@@ -10,7 +10,7 @@
   var isIE = navigator.appName.indexOf("Explorer") > -1;
   var routerBase = window.routerBase || "/";
   var isInternalDirect = true;
-  var redirectUrl = "./pages/a61298/";
+  var redirectUrl = "/pages/a61298/";
   var countdown = el 
   ? (isIE ? el.innerText : el.textContent)
   : 0;
@@ -18,7 +18,7 @@
   function redirect() { 
     if (countdown <= 0) { 
       if (isInternalDirect) {
-         redirectUrl = routerBase + redirectUrl.replace(/^\//, '')
+         redirectUrl = routerBase + '/auto-testing' + redirectUrl.replace(/^\//, '')
       }
       location.href = redirectUrl
 
